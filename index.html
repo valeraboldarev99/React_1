@@ -5,107 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 1</title>
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/media.css">
 
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script src="src/components/MovieList.jsx" type='text/babel'></script>
-    <script type='text/babel'>
-        const element = React.createElement;
-        class MenuItem extends React.Component {
-            render() {
-                return element(
-                    'li', null, element(
-                            'a', {href: "#"}, this.props.link_name
-                        )
-                );
-            }
-        }
 
-        function HeaderMenu()
-        {
-            return (
-                <React.Fragment>
-                    <ul className="header__menu_list">
-                        <MenuItem link_name="Новинки"/>
-                        <MenuItem link_name="Фильмы"/>
-                        <MenuItem link_name="Сериалы"/>
-                        <MenuItem link_name="ТВ-Каналы"/>
-                        <MenuItem link_name="Мультфильмы"/>
-                    </ul>
-                </React.Fragment>
-            );
-        }
-
-        function SidebarMenu()
-        {
-            return (
-                <React.Fragment>
-                    <ul className="header__menu_list">
-                        <MenuItem link_name="О нас"/>
-                        <MenuItem link_name="Контакты"/>
-                        <MenuItem link_name="Партнерам"/>
-                    </ul>
-                </React.Fragment>
-            );
-        }
-
-        function FooterMenu()
-        {
-            return (
-                <React.Fragment>
-                    <ul className="header__menu_list">
-                        <MenuItem link_name="Фантастика"/>
-                        <MenuItem link_name="Боевики"/>
-                        <MenuItem link_name="Научные"/>
-                    </ul>
-                </React.Fragment>
-            );
-        }
-
-        ReactDOM.render(<HeaderMenu />, document.getElementById('header__menu'));
-        ReactDOM.render(<SidebarMenu />, document.getElementById('sidebar__menu'));
-        ReactDOM.render(<MovieList />, document.getElementById('movies__items'));
-        ReactDOM.render(<FooterMenu />, document.getElementById('footer__menu'));
-    </script>
+    <script src="src/components/Movie.jsx" type="text/babel"></script>
+    <script src="src/components/Menu.jsx" type="text/babel"></script>
+    <script src="src/components/PageComponents.jsx" type="text/babel"></script>
+    <script src="src/components/App.jsx" type="text/babel"></script>
 </head>
 <body>
-    <div class="page">
-        <header class="header">
-            <div class="wrapper">
-                <div class="header__inner">
-                    <div class="logo">
-                        <img src="src/img/logo.png" alt="logo">
-                    </div>
-                    <nav class="header__menu" id="header__menu">
-                        ***
-                    </nav>
-                </div>
-            </div>
-        </header>
-        <div class="page__content">
-            <div class="main__content" id="main__content">
-                <h1 class="main__content_header">Фильмы</h1>
-                <div class="movies__items" id="movies__items">
-                    ***
-                </div>
-            </div>
-            <div class="sidebar">
-                <h3>Категории фильмов:</h3>
-                <nav class="sidebar__menu" id="sidebar__menu">
-                   ***
-                </nav>
-            </div>
-        </div>
-        <footer class="footer">
-            <div class="wrapper">
-                <nav class="footer__menu" id="footer__menu">
-                    ***
-                </nav>
-            </div>
-        </footer>
-        <script src="src/components/Movie.js"></script>
-        <script src="src/components/MenuItem.js"></script>
-    </div>
+    <div class="page" id="page"></div>
 </body>
 </html>

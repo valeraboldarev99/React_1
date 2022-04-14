@@ -101,7 +101,6 @@ ul {
 	margin-bottom: 20px;
 }
 .movies__item:hover {
-	width: 30%;
 	border: 8px solid #fbc100;
 	cursor: pointer;
 }
